@@ -1,6 +1,8 @@
-<template>
-  <TextInput @addTodo="addTodo" />
-  <TodoList @deleteData="deleteData" :todoItem="todoItem" />
+<template clas>
+  <div class="App">
+    <TextInput @addTodo="addTodo" />
+    <TodoList @deleteData="deleteData" :todoItem="todoItem" />
+  </div>
 </template>
 
 <script>
@@ -18,20 +20,7 @@ export default {
     };
   },
   created() {
-    this.todoItem = [
-      // {
-      //   id: 1,
-      //   text: "testing my dude",
-      // },
-      // {
-      //   id: 2,
-      //   text: "Testing Two My Dude",
-      // },
-      // {
-      //   id: 3,
-      //   text: "just a random text",
-      // },
-    ];
+    this.todoItem = [];
   },
   methods: {
     addTodo(text) {
@@ -59,5 +48,25 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin: 0;
+  width: clamp(20rem, 50%, 30rem);
+}
+body {
+  padding: 1em;
+  margin: 0;
+  background: rgb(0, 219, 255);
+  background: linear-gradient(
+    120deg,
+    rgba(0, 219, 255, 1) 0%,
+    rgba(179, 0, 255, 1) 100%
+  );
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.App {
+  border: 3px solid white;
+  border-radius: 25px;
 }
 </style>

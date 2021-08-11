@@ -1,7 +1,9 @@
 <template>
   <div class="todo-item">
     <h1>{{ todo.text }}</h1>
-    <button @click="deleteData(todo.id)">Delete</button>
+    <button @click="deleteData(todo.id)">
+      <i class="fas fa-trash"></i>
+    </button>
   </div>
 </template>
 
@@ -22,17 +24,25 @@ export default {
 <style lang="scss" scoped>
 div {
   padding: 1em;
-  border: 3px solid black;
+  border: 3px solid white;
+  border-radius: 25px;
+  color: white;
 }
 .todo-item {
   display: flex;
   justify-content: space-between;
-
+  h1 {
+    font-size: 1rem;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
   button {
+    cursor: pointer;
     background: none;
-    border-radius: 10px;
     outline: none;
-    padding: 1em;
+    font-size: 1.5rem;
+    border: none;
+    color: white;
   }
 }
 </style>

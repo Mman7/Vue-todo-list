@@ -12,6 +12,7 @@ export default {
   props: {
     todoItem: Array,
   },
+  emits: ["deleteData "],
   methods: {
     deleteData(id) {
       this.$emit("deleteData", id);
@@ -23,6 +24,5 @@ export default {
 <style lang="scss" scoped>
 .todo-list {
   padding: 0.5em;
-  border: 3px solid blueviolet;
 }
 </style>
